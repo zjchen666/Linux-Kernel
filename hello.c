@@ -27,11 +27,20 @@ static struct file_operations ops = {
 
 /* static variables*/
 static int major = 0;
+static char* module_name = "hello_world";
+module_param(module_name, charp, S_IRUGO);
+
 #define DEVICE_NAME  "hello"
+int hello_world_symbol(void)
+{
+    return 0;
+}
+
+EXPORT_SYMBOL(hello_world_symbol);
 
 int __init add_module(void)
 {
-	printk(KERN_INFO "Hello World!\n");
+	printk(KERN_INFO "%s\n", module_name);
 	major = register_chrdev(0, DEVICE_NAME, &ops);
 	printk("The major number is: %d\n", major);
 	return 0;
