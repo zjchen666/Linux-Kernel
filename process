@@ -1,0 +1,7 @@
+## Process
+### Priority of thread
+0 - 99 RT thread
+100 - 120 Normal thread
+
+
+
