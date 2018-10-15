@@ -8,3 +8,8 @@ ARM - 没有中断向量
 disable_irq_nosync() 与 disable_irq()的区别：
 - disable_irq_nosync() 立即disable
 - disable_irq() 等待执行完再disable， 不能在同一个中断中执行，否则会死锁， 例如， 在5号中断ISR调用 disable_irq(5).
+
+PPI, SPI, IPI  
+PPI - CPU 独有  
+IPI - CPU 之间  
+SPI - shared 中断  
