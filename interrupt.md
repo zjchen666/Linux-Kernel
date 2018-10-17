@@ -13,3 +13,14 @@ PPI, SPI, IPI
 PPI - CPU 独有  
 IPI - CPU 之间  
 SPI - shared 中断  
+
+Bottom half - tasklet(), threaded_irq(), workqueue()
+tasklet_init()
+tasklet_schedule()/tasklet_hi_schedule()
+
+do_softirq() - 三个时机
+ 1 ksoftirqd() - softirq deamon.
+ 2 spin_lock_bh 返回。
+ 3. do_softirq() is called by softirq.
+ 
+ request_threaded_irq()
