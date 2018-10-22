@@ -24,3 +24,4 @@ do_softirq() - 三个时机
  3. do_softirq() is called by softirq.
  
  request_threaded_irq()
+ ### linux 中断号
