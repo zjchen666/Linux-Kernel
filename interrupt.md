@@ -25,3 +25,4 @@ do_softirq() - 三个时机
  
  request_threaded_irq()
  ### linux 中断号
+http://liaoph.com/linux-interrupt/
