@@ -4,7 +4,6 @@
 git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 
 安装arm的交叉编译工具链
-想必做嵌入式开发的朋友，对交叉编译工具链不陌生。如果你订制一个交叉编译工具链，建议你使用crosstool-ng开源软件来构建。但在这里建议直接安装arm的交叉编译工具链：
 sudo apt-get install gcc-arm-linux-gnueabi
 
 编译Linux内核
@@ -12,7 +11,19 @@ sudo apt-get install gcc-arm-linux-gnueabi
 
 make CROSS_COMPILE=arm-linux-gnueabi- ARCH=arm vexpress_defconfig
 
-
 编译：
 make CROSS_COMPILE=arm-linux-gnueabi- ARCH=arm
 生成的内核镱像位于arch/arm/boot/zImage， 后续qemu启动时需要使用该镜像。
+
+启动脚本：
+```cpp
+#!/bin/bash
+
+qemu-system-arm \
+-M vexpress-a9 \
+-m 512M \
+-kernel linux-4.17.4/arch/arm/boot/zImage \
+-dtb linux-4.14.4/arch/arm/boot/dts/vexpress-v2p-ca9.dtb \
+-nographic \
+-append "console=ttyAMA0"
+```
