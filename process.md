@@ -12,3 +12,6 @@ User: 0 - 99
 | RT 99  |  99 - 99  | rt           |
 | nice 5 |           | 20 + 5       |
 | nice -5|           | 20 -5        |
+
+### Pthread Scheduling:
+Linux by default, uses the ntpl (Native POSIX Thread Library) implementation which considers a thread as a light-weigth process, so the scheduler schedules threads with other processes.
