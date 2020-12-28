@@ -21,6 +21,6 @@ Linux by default, uses the ntpl (Native POSIX Thread Library) implementation whi
 ```cpp
 cat /proc/sys/kernel/randomize_va_space
 ```
-0 = Disabled. 
+0 = Disabled.  
 1 = Conservative Randomization  
 2 = Full Randomization. 
