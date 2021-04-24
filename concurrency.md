@@ -1,5 +1,5 @@
 
-![image](https://user-images.githubusercontent.com/33012472/115949665-78430680-a48b-11eb-994b-2156f2f7f150.png)
+![image](https://user-images.githubusercontent.com/33012472/115949719-c6f0a080-a48b-11eb-9a83-132c65a483e5.png)
 
 
 ### semphore, mutex, condition variable and event
