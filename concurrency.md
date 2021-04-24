@@ -1,4 +1,7 @@
 
+![image](https://user-images.githubusercontent.com/33012472/115949665-78430680-a48b-11eb-994b-2156f2f7f150.png)
+
+
 ### semphore, mutex, condition variable and event
 ### DeadLock
    4 conditions: 
